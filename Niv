@@ -43,3 +43,14 @@ while ver <= nameprint:
     ver += 1
 
 print("I'm Niv")
+
+
+
+
+import random
+
+def random(num):
+    return random.randint(1, num)
+
+x = random(2)
+print(x)
