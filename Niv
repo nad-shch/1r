@@ -32,21 +32,18 @@ while next == False:
     next = check (answer1, next, start)
 
 
-x = random.randint(1, 2)
+x = random.randint(2,3)
 
 
 if next == True:
     name = input("What's your name? ")
     namelen = int(len(name))
-    if x == 1:
-        nameprint = int(namelen - 3)
-    elif x == 2:
-        nameprint = int(namelen - 2)
+    nameprint = int(namelen - x)
 print("hello")
 ver = 0
 while ver <= nameprint:
 
-    print("\b\b\b",name [ver])
+    print(name [ver])
     ver += 1
 
 
