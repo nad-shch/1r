@@ -1,0 +1,45 @@
+start = "hi guys"
+
+answer1 = ""
+
+next = False
+
+name = ""
+
+
+def hello(start, answer1):
+    print(start)
+    answer1 = input(str("*waiting for answer* "))
+    return answer1
+
+
+answer1 = hello(start, answer1)
+
+
+def check (answer1, next, start):
+    if answer1.upper() == "HELLO" or answer1.upper() == "HI":
+        next = True
+    else:
+        next = False
+    return next
+
+next = check (answer1, next, start)
+
+while next == False:
+    answer1 = hello(start, answer1)
+    next = check (answer1, next, start)
+
+
+if next == True:
+    name = input("What's your name? ")
+    namelen = int(len(name))
+    nameprint = int(namelen - 3)
+
+print("hello")
+ver = 0
+while ver <= nameprint:
+
+    print("\b\b\b",name [ver])
+    ver += 1
+
+print("I'm Niv")
