@@ -1,3 +1,5 @@
+import random
+
 start = "hi guys"
 
 answer1 = ""
@@ -30,11 +32,16 @@ while next == False:
     next = check (answer1, next, start)
 
 
+x = random.randint(1, 2)
+
+
 if next == True:
     name = input("What's your name? ")
     namelen = int(len(name))
-    nameprint = int(namelen - 3)
-
+    if x == 1:
+        nameprint = int(namelen - 3)
+    elif x == 2:
+        nameprint = int(namelen - 2)
 print("hello")
 ver = 0
 while ver <= nameprint:
@@ -42,15 +49,5 @@ while ver <= nameprint:
     print("\b\b\b",name [ver])
     ver += 1
 
+
 print("I'm Niv")
-
-
-
-
-import random
-
-def random(num):
-    return random.randint(1, num)
-
-x = random(2)
-print(x)
