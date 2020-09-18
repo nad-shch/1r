@@ -45,15 +45,12 @@ while t <  times:
 
     if next == True:
         name = input("What's your name? ")
-        namelen = int(len(name))
-        nameprint = int(namelen - x)
-    print("hello")
-    ver = 0
-    while ver <= nameprint:
+        print("hello")
 
-        print(name [ver])
-        ver += 1
-
+        if x == 2:
+            print(name, "\b\b")
+        elif x == 3:
+            print(name, "\b\b")
 
     print("I'm Niv")
 
