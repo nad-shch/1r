@@ -50,7 +50,7 @@ while t <  times:
         if x == 2:
             print(name, "\b\b")
         elif x == 3:
-            print(name, "\b\b")
+            print(name, "\b\b\b")
 
     print("I'm Niv")
 
