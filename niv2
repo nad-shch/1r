@@ -1,0 +1,18 @@
+import random
+x = str(input("enter 1st show "))
+y = str(input("enter 2nd show "))
+
+a = random.randint(1,20)
+
+if a == 10:
+    z = False
+else:
+    z = True
+print("what shw do you want to see? \nniv: ", x)
+
+while z == True:
+    print("you sure you want to watch this show?\nNiv: I want to watch ", y)
+    print("you sure you want to watch this show?\nNiv: I want to watch ", x)
+
+while z == False:
+    print("Niv: I don't want to watch TV!!!")
