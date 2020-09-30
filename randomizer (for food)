@@ -1,0 +1,35 @@
+import random
+import linecache
+
+def num_dish(answer):
+    if answer.upper() == "STOP":
+        ask = False
+    else:
+        ask = True
+    return ask
+
+ask = True
+dishnum = 1
+def inputs(ask, dishnum):
+    dishes = open("dishes", "r+")
+    while ask == True:
+        dish = str(input(dishnum))
+        dishes.write(dish)
+        dishes.write("\n")
+        ask = num_dish(dish)
+        dishnum += 1
+    dishes.close()
+    return dishnum
+
+dishnum = inputs(ask, dishnum)
+
+choice = open("dishes", "r")
+
+dishnum -= 2
+
+x = 0
+while x < 3:
+    ran = random.randint(1, dishnum)
+    print("You've got ")
+    print(linecache.getline('dishes', ran))
+    x += 1
